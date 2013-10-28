@@ -4,6 +4,7 @@
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
+    <link href="css/jquery-ui.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/slider.css" rel="stylesheet" media="screen">
     <link href="css/designer.css" rel="stylesheet" media="screen">
@@ -19,20 +20,20 @@
             <li >
                 <div class="row container">
                     <div class="col-sm-offset-1">
-                        <div id="cols_widths"></div>
-                        <button id="create_grid_row_btn" class="btn btn-default btn-xs pull-right" type="button" >
+                        <input id="col_widths" class="span2" type="text" data-slider-value="[4,8,12]" data-slider-step="1" data-slider-max="12" value="" style="">
+                        <div id="create_grid_row_btn" class="btn btn-default btn-xs pull-right" type="button" >
                             Drag
                             <span class="glyphicon glyphicon-move"></span>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row container">
                     <div class="col-sm-offset-1">
-                        Cras justo odio
-                        <button class="btn btn-default btn-xs pull-right" type="button">
+                        Image
+                        <div id="create_image_btn" class="btn btn-default btn-xs pull-right" type="button">
                             Drag
                             <span class="glyphicon glyphicon-move"></span>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -43,13 +44,17 @@
             <div class="container" id="page">
 
             </div>
-
         </div>
+
     </div>
 
 </div>
 
+
 <script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jqueryUi/droppable.js"></script>
+<script src="js/jqueryUi/draggable.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-slider.js"></script>
 <script src="js/grid-creation.js"></script>

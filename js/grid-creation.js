@@ -3,18 +3,12 @@ var els_c = "els-container";
 var grid_container = "container";
 var div = "<div></div>";
 
-function create_row (cols_widths) {
-    $('#page').append(create_row_container(cols_widths));
-}
-
 function create_row_container (cols_widths) {
     var row = $(div);
+    row.width($('#page').width() - 100)
     row.addClass(row_c).addClass(els_c);
     row.append(create_row_options());
     row.append(create_row_columns(cols_widths));
-//    var inner_row_container = $(div);
-//    inner_row_container.addClass(grid_row).addClass(grid_container);
-//    row.append(inner_row_container);
     return row;
 }
 
@@ -49,27 +43,7 @@ function create_row_columns(cols_widths) {
 
     var columns = $(div).addClass(grid_row).addClass(grid_container);
     for (width in cols_widths) {
-        columns.append(create_grid_column(width));
+        columns.append(create_grid_column(cols_widths[width]));
     }
     return columns;
 }
-
-
-//<div class="row-container  els-container">
-//    <div class="row container">
-//        <div class="col-xs-4">
-//            <div class="column-container els-container">
-//
-//            </div>
-//        </div>
-//        <div class="col-xs-4">
-//            <div class="column-container els-container">
-//
-//            </div>
-//        </div>
-//        <div class="col-xs-4">
-//            <div class="column-container els-container">
-//            </div>
-//        </div>
-//    </div>
-//</div>
