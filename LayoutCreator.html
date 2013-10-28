@@ -4,14 +4,55 @@
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/slider.css" rel="stylesheet" media="screen">
+    <link href="css/designer.css" rel="stylesheet" media="screen">
 </head>
 <body>
 <div class="container">
-    <h1 class="span4 offset4">Hello, world!</h1>
+    <div class="master col-md-3 well">
+        <ul class="nav">
+            <li class="nav-header">
+                <i class="icon-plus icon-white"></i>
+                Containers
+            </li>
+            <li >
+                <div class="row container">
+                    <div class="col-sm-offset-1">
+                        <div id="cols_widths"></div>
+                        <button id="create_grid_row_btn" class="btn btn-default btn-xs pull-right" type="button" >
+                            Drag
+                            <span class="glyphicon glyphicon-move"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row container">
+                    <div class="col-sm-offset-1">
+                        Cras justo odio
+                        <button class="btn btn-default btn-xs pull-right" type="button">
+                            Drag
+                            <span class="glyphicon glyphicon-move"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="work-space container els-container">
+            <div class="container" id="page">
+
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src="js/grid-creation.js"></script>
+<script src="js/layout-creator-init.js"></script>
 </body>
 </html>
