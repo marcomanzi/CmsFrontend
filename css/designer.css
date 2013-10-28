@@ -65,3 +65,12 @@
 .options {
     padding-right: 0px;
 }
+
+.dropZone {
+    min-height: 15px;
+}
+
+.drop-area {
+    border: 1px dotted black;
+    height: 40px;
+}
