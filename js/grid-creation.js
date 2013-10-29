@@ -20,7 +20,7 @@ function create_row_options () {
 
     function create_row_option_button (text, icon_type, css) {
         var button = $("<button>" + text + "</button>").addClass(row_options_c).addClass(css);
-        var icon = $("<span class='" + icont_type + "'></span>").addClass(icon_css)
+        var icon = $("<span class='" + icon_type + "'></span>").addClass(icon_css)
             .addClass(icon_css + "-" + icon_type);
         return button.append(icon);
     }

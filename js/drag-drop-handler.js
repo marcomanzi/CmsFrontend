@@ -8,8 +8,16 @@ function drop_element (event, ui, dropZone) {
     $(dropZone).after(create_drop_zone());
     $(dropZone).after(dragged);
     make_droppable($(".dropZone"));
-    add_remove_(".remove");
+//    add_remove_behaviour();
 }
+
+function add_remove_behaviour () {
+    $(".remove").click(function () {
+        $(this).remove();
+    });
+}
+
+
 
 function make_draggable(element, helperHtml) {
     $(element).draggable({
