@@ -37,8 +37,9 @@ function create_row_columns(cols_widths) {
 
     function create_grid_column(n_col) {
         var column_grid = $(div).addClass(grid_width_prefix + n_col);
-        var int_column = $(div).addClass(col_c).addClass(els_c);
-        return column_grid.append(int_column);
+        var column_internal = $(div).addClass(col_c).addClass(els_c);
+        column_internal.append(create_inside_column_drop_zone());
+        return column_grid.append(column_internal);
     }
 
     var columns = $(div).addClass(grid_row).addClass(grid_container);

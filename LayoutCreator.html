@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="master col-md-3 well">
+    <div class="master col-xs-3 well">
         <ul class="nav">
             <li class="nav-header">
                 <i class="icon-plus icon-white"></i>
@@ -20,7 +20,7 @@
             <li >
                 <div class="row container">
                     <div class="col-sm-offset-1">
-                        <input id="col_widths" class="span2" type="text" data-slider-value="[4,8,12]" data-slider-step="1" data-slider-max="12" value="" style="">
+                        <input id="col_widths" class="col-xs-6" type="text" style="padding: 0;">
                         <div id="create_grid_row_btn" class="btn btn-default btn-xs pull-right" type="button" >
                             Drag
                             <span class="glyphicon glyphicon-move"></span>
@@ -36,10 +36,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="row container">
+                    <div class="col-sm-offset-1">
+                        Title
+                        <div id="title_btn" class="btn btn-default btn-xs pull-right" type="button">
+                            Drag
+                            <span class="glyphicon glyphicon-move"></span>
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
-    <div class="col-md-9">
+    <div class="col-xs-9">
         <div class="work-space container els-container">
             <div class="container" id="page">
                 <div class="dropZone"></div>
@@ -54,6 +63,7 @@
 <script src="js/jqueryUi/draggable.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-slider.js"></script>
+<script src="js/drag-drop-handler.js"></script>
 <script src="js/grid-creation.js"></script>
 <script src="js/layout-creator-init.js"></script>
 </body>
