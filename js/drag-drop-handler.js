@@ -8,12 +8,13 @@ function drop_element (event, ui, dropZone) {
     $(dropZone).after(create_drop_zone());
     $(dropZone).after(dragged);
     make_droppable($(".dropZone"));
-//    add_remove_behaviour();
+    add_remove_behaviour();
 }
 
 function add_remove_behaviour () {
-    $(".remove").click(function () {
-        $(this).remove();
+    $(".remove").parent().click(function () {
+        var rowContainer = $(this).parent().parent();
+        rowContainer.remove();
     });
 }
 
