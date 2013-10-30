@@ -1,24 +1,32 @@
-
-function drop_element (event, ui, dropZone) {
-    var dragged = $(ui.helper).clone(false)
-        .removeClass('ui-draggable-dragging')
-        .css({position:'absolute', left:0, top:ui.offset.top - 12});
-    dragged.attr("style", "");
-    $(dropZone).removeClass("first-column-dropZone")
-    $(dropZone).after(create_drop_zone());
-    $(dropZone).after(dragged);
-    make_droppable($(".dropZone"));
-    add_remove_behaviour();
+function remove_element () {
+    internal_remove($(this).parent());
 }
 
-function add_remove_behaviour () {
+function internal_remove(toRemove) {
+    var currEleIdx = toRemove.index();
+    $(toRemove).parent().children().get(currEleIdx + 1).remove();
+    toRemove.remove();
+}
+
+function add_remove_row_behaviour () {
     $(".remove").parent().click(function () {
-        var rowContainer = $(this).parent().parent();
-        rowContainer.remove();
+        internal_remove($(this).parent().parent().parent());
     });
 }
 
-
+function drop_element (event, ui, dropZone) {
+    var row_container = $("<div class='row container'></div>");
+    var dragged = $(ui.helper).clone(false)
+        .removeClass('ui-draggable-dragging')
+        .css({width: "auto"}).removeAttr("auto");
+    dragged.attr("style", "");
+    row_container.append(dragged);
+    $(dropZone).removeClass("first-column-dropZone")
+    $(dropZone).after(create_drop_zone());
+    $(dropZone).after(row_container);
+    make_droppable($(".dropZone"));
+    add_remove_row_behaviour();
+}
 
 function make_draggable(element, helperHtml) {
     $(element).draggable({
